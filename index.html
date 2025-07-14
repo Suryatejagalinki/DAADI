@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DAADI – Nine Men's Morris Multiplayer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>DAADI – Nine Men's Morris Multiplayer</h1>
+    <p class="signature">Created by suryatejagalinki</p>
+  </header>
+
+  <main>
+    <section id="game-board">
+      <!-- Wooden-style board will be rendered here -->
+    </section>
+
+    <section id="game-controls">
+      <button onclick="startLocalGame()">Local PvP</button>
+      <button onclick="startAIGame()">Player vs AI</button>
+      <button onclick="createPrivateRoom()">Create Private Room</button>
+      <input type="text" id="roomCode" placeholder="Enter Room Code" />
+      <button onclick="joinPrivateRoom()">Join Room</button>
+      <button onclick="startRandomMatch()">Random Matchmaking</button>
+    </section>
+
+    <section id="game-status">
+      <p id="turn-indicator"></p>
+      <p id="timer">Move Timer: 10s</p>
+    </section>
+
+    <section>
+      <button onclick="exportGameHistory()">Export Game History</button>
+    </section>
+  </main>
+
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
